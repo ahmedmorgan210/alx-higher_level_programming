@@ -3,9 +3,8 @@
 if __name__ == "__main__":
 
     import sys
-    #import calculator_1 as calc
+
     from calculator_1 import add, sub, mul, div
-    #from calc import add, sub, mul, div
 
     argc = len(sys.argv)
     result = 0
@@ -37,5 +36,3 @@ if __name__ == "__main__":
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
-
-
