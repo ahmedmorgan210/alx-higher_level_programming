@@ -9,7 +9,7 @@ def print_matrix_integer(matrix=[[]]):
             You have to use str.format() to print integers
     """
     if len(matrix) <= 0:
-        return
+        return None
     else:
 
         for i in range(len(matrix)):
