@@ -8,7 +8,7 @@ def print_matrix_integer(matrix=[[]]):
             You are not allowed to cast integers into strings
             You have to use str.format() to print integers
     """
-    if matrix is None:
+    if len(matrix) <= 0:
         return
     else:
 
