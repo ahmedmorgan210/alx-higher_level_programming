@@ -9,7 +9,10 @@ def print_reversed_list_integer(my_list=[]):
             You are not allowed to cast integers into strings
             You have to use str.format() to print integers
     """
-    my_list.reverse()
+    if my_list == None:
+        return
+    else:
+        my_list.reverse()
 
-    for rev_num in range(len(my_list)):
-        print("{:d}".format(my_list[rev_num]))
+        for rev_num in range(len(my_list)):
+            print("{:d}".format(my_list[rev_num]))
