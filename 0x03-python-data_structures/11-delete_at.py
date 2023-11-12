@@ -2,12 +2,12 @@
 
 def delete_at(my_list=[], idx=0):
 
-    if len(my_list) == 0:
-        return None
+    # if len(my_list) == 0:
+    #     return None
 
     new_list = my_list.copy()
 
-    if idx < 0 or idx >= len(my_list):
+    if idx <= 0 or idx >= len(my_list):
         return my_list
     else:
         del new_list[idx]
