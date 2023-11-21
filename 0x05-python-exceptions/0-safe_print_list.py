@@ -20,7 +20,7 @@ def safe_print_list(my_list=[], x=0):
         printed_items = 0
         i = 0
 
-        for item in range(len(my_list)):
+        for item in my_list:
             if printed_items >= x:
                 break
 
