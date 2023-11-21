@@ -7,7 +7,7 @@ Write a function that prints an integer with "{:d}".format().\
         The integer should be printed followed by a new line
         Returns:
             True if value has been correctly printed
-                 (it means the value is an integer)
+                   (it means the value is an integer)
             Otherwise, returns False
         You have to use try: / except:
         You have to use "{:d}".format() to print as integer
