@@ -5,4 +5,12 @@
 class Square:
     """Define a square class. """
 
-    pass
+    def __init__(self, size):
+        """
+        Parameters
+        ----------
+            size : the size of the square.
+
+        """
+
+        self.__size = size
