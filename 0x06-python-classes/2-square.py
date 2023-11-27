@@ -12,14 +12,9 @@ class Square:
             size : the size of the square.
 
         """
-        try:
-            self.__size = size
-            if isinstance(size, int) and int(size) >= 0:
-                #self.__size = size
-                pass
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
 
-        except TypeError:
-            print("size must be an integer")
-
-        except ValueError:
-            print("size must be >= 0")
+        self.__size = size
