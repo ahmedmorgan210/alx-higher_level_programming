@@ -14,7 +14,7 @@ a loop to iterate on every single argv
 adding it to the total
 
 """
-    for i in range(1, argc):
-        total += int(sys.argv[i])
+for i in range(1, argc):
+    total += int(sys.argv[i])
 
-    print(total)
+print(total)
