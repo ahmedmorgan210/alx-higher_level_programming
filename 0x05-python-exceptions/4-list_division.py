@@ -9,18 +9,21 @@ def list_division(my_list_1, my_list_2, list_length):
             a = my_list_1[i]
             b = my_list_2[i]
             div = a / b
-            if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-                try:
-                    # div = a / b
-                    result_list.append(div)
-                except ValueError:
-                    div = 0
-                    result_list.append(div)
+            result_list.append(div)
+            # if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+            #     try:
+            #         # div = a / b
+            #         # result_list.append(div)
+            #     except ValueError:
+            #         div = 0
+            #         result_list.append(div)
 
                 # except TypeError:
                 #     print("wrong type")
                 #     result_list.append(0)
-
+        except ValueError:
+            div = 0
+            result_list.append(div)
         except ZeroDivisionError:
             print("division by 0")
             result_list.append(0)
