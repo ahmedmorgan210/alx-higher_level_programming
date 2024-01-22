@@ -8,9 +8,10 @@ def list_division(my_list_1, my_list_2, list_length):
         try:
             a = my_list_1[i]
             b = my_list_2[i]
+            div = a / b
             if isinstance(a, (int, float)) and isinstance(b, (int, float)):
                 try:
-                    div = a / b
+                    # div = a / b
                     result_list.append(div)
                 except ValueError:
                     div = 0
