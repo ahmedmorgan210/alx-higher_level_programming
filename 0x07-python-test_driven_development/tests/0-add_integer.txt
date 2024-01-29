@@ -1,0 +1,26 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+This is an example text file in reStructuredText format. 
+First
+import ``add_integer`` from the ``0-add_integer`` module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+adding two integers
+    >>> add_integer(3, 7)
+    10
+	
+	>>> add_integer(-3, -7)
+	-7
+
+adding integer to string
+	>>> add_integer("ahmed", -7)
+	Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
