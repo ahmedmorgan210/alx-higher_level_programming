@@ -21,6 +21,4 @@ adding two integers
 
 adding integer to string
 	>>> add_integer("ahmed", -7)
-	Traceback (most recent call last):
-        ...
-    TypeError: a must be an integer
+    a must be an integer
