@@ -3,6 +3,12 @@
 
 
 def print_square(size):
-    """print square func"""
-
-    pass
+    """prin the square func"""
+    if type(size) is not int:
+        raise TypeError("size must be an integer")
+    for r in range(0, size):
+        for c in range(0, size):
+            if c != (size - 1):
+                print("#", end="")
+            else:
+                print("#")
