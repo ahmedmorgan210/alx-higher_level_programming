@@ -23,21 +23,10 @@ integers/floats")
                 raise TypeError("matrix must be a matrix (list of lists) of \
 integers/floats")
 
-    new_matrix = []
+    result = []
     for row in matrix:
         new_row = []
         for item in row:
-            if item == float('inf') or item == -float('inf') or item != item:
-                new_row.append(10.0)
-            else:
-                new_row.append(item)
-        new_matrix.append(new_row)
-
-    final_matrix = []
-    for row in new_matrix:
-        final_row = []
-        for item in row:
-            final_row.append(round(item / div, 2))
-        final_matrix.append(final_row)
-
-    return final_matrix
+            new_row.append(round(item / div, 2))
+        result.append(new_row)
+    return result
