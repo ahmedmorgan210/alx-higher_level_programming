@@ -3,6 +3,6 @@
 
 
 def print_square(size):
-	"""print square func"""
+    """print square func"""
 
-	pass
+    pass
