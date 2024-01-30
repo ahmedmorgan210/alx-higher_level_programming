@@ -1,0 +1,13 @@
+The ``4-print_square`` module
+======================
+
+Using ``print_square``
+-------------------
+
+This is an example text file in reStructuredText format. 
+First
+import ``print_square`` from the ``4-print_square`` module:
+
+>>> print_square = __import__('4-print_square').print_square
+
+Now use it:
