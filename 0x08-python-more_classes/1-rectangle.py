@@ -19,7 +19,7 @@ class Rectangle:
             height (int): the Rectangle height.
 
         """
-        se.width = width
+        self.width = width
         self.height = height
 
     @property
