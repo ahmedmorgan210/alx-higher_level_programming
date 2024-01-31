@@ -1,0 +1,13 @@
+The ``101-lazy_matrix_mul.py`` module
+======================
+
+Using ``lazy_matrix_mul``
+-------------------
+
+This is an example text file in reStructuredText format. 
+First
+import ``lazy_matrix_mul`` from the ``101-lazy_matrix_mul.py`` module:
+
+>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+Now use it:
