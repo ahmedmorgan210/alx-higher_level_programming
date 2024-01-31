@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""matrix multiplication"""
+"""matrix multiplication module"""
 
 
 def check_type(value, expected_type, error_message):
@@ -19,23 +19,27 @@ def check_list_of_lists(value, error_message):
 
 
 def check_not_empty(value, error_message):
+    """matrix multiplication"""
     if len(value) == 0 or len(value[0]) == 0:
         raise ValueError(error_message)
 
 
 def check_same_size(value, error_message):
+    """matrix multiplication"""
     for sub_value in value:
         if len(sub_value) != len(value[0]):
             raise TypeError(error_message)
 
 
 def check_numeric(value, error_message):
+    """matrix multiplication"""
     for sub_value in value:
         if type(sub_value) is not int and type(sub_value) is not float:
             raise TypeError(error_message)
 
 
 def matrix_mul(m_a=[[1]], m_b=[[1]]):
+    """matrix multiplication"""
     check_type(m_a, list, "m_a must be a list")
     check_type(m_b, list, "m_b must be a list")
     check_list_of_lists(m_a, "m_a must be a list of lists")
