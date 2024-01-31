@@ -1,59 +1,39 @@
 #!/usr/bin/python3
-"""matrix multiplication module"""
-
-
-def check_type(value, expected_type, error_message):
-    """matrix multiplication"""
-
-    if type(value) is not expected_type:
-        raise TypeError(error_message)
-
-
-def check_list_of_lists(value, error_message):
-    """matrix multiplication"""
-    if type(value) is not list:
-        raise TypeError(error_message)
-    for sub_value in value:
-        if type(sub_value) is not list:
-            raise TypeError(error_message)
-
-
-def check_not_empty(value, error_message):
-    """matrix multiplication"""
-    if len(value) == 0 or len(value[0]) == 0:
-        raise ValueError(error_message)
-
-
-def check_same_size(value, error_message):
-    """matrix multiplication"""
-    for sub_value in value:
-        if len(sub_value) != len(value[0]):
-            raise TypeError(error_message)
-
-
-def check_numeric(value, error_message):
-    """matrix multiplication"""
-    for sub_value in value:
-        if type(sub_value) is not int and type(sub_value) is not float:
-            raise TypeError(error_message)
+"""module doc"""
 
 
 def matrix_mul(m_a=[[1]], m_b=[[1]]):
-    """matrix multiplication"""
-    check_type(m_a, list, "m_a must be a list")
-    check_type(m_b, list, "m_b must be a list")
-    check_list_of_lists(m_a, "m_a must be a list of lists")
-    check_list_of_lists(m_b, "m_b must be a list of lists")
-    check_not_empty(m_a, "m_a can't be empty")
-    check_not_empty(m_b, "m_b can't be empty")
-    check_same_size(m_a, "each row of m_a must be of the same size")
-    check_same_size(m_b, "each row of m_b must be of the same size")
-    check_numeric(m_a, "m_a should contain only integers or floats")
-    check_numeric(m_b, "m_b should contain only integers or floats")
+    """module doc"""
+    if type(m_a) is not list:
+        raise TypeError("m_a must be a list")
+    if type(m_b) is not list:
+        raise TypeError("m_b must be a list")
+    for m_aa in m_a:
+        if type(m_aa) is not list:
+            raise TypeError("m_a must be a list of lists")
+    for m_bb in m_b:
+        if type(m_bb) is not list:
+            raise TypeError("m_b must be a list of lists")
+    if len(m_a) == 0 or len(m_a[0]) == 0:
+        raise ValueError("m_a can't be empty")
+    if len(m_b) == 0 or len(m_b[0]) == 0:
+        raise ValueError("m_b can't be empty")
+    for r_a in m_a:
+        if len(r_a) != len(m_a[0]):
+            raise TypeError("each row of m_a must be of the same size")
+        for c_a in r_a:
+            if type(c_a) is not int and type(c_a) is not float:
+                raise TypeError("m_a should contain only integers or floats")
+    for r_b in m_b:
+        if len(r_b) != len(m_b[0]):
+            raise TypeError("each row of m_b must be of the same size")
+        for c_b in r_b:
+            if type(c_b) is not int and type(c_b) is not float:
+                raise TypeError("m_b should contain only integers or floats")
     if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
 
-    result = [[0 for _ in range(len(m_b[0]))] for _ in range(len(m_a))]
+    result = [[0 for i in range(len(m_b[0]))] for j in range(len(m_a))]
 
     for idx_r in range(len(result)):
         for idx_c in range(len(result[0])):
