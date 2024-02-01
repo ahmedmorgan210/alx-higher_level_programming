@@ -12,3 +12,8 @@ import ``say_my_name`` from the ``3-say_my_name`` module:
 
 Now use it:
 
+passing a variable as an argument
+>>> say_my_name(hello, "world")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
