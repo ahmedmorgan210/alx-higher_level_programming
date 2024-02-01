@@ -40,3 +40,9 @@ float overflow (passing float that exceeds the maximum representable finite posi
 Traceback (most recent call last):
     ...
 OverflowError: cannot convert float infinity to integer
+
+casting non-floating value
+>>> add_integer(float('ahmed'), 1)
+Traceback (most recent call last):
+    ...
+ValueError: could not convert string to float: 'ahmed'
