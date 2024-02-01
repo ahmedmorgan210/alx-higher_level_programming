@@ -16,4 +16,14 @@ passing a variable as an argument
 >>> say_my_name(hello, "world")
 Traceback (most recent call last):
     ...
+NameError: name 'hello' is not defined
+
+adding 2 normal strings
+>>> say_my_name("hello", "world")
+My name is hello world
+
+first argument is not a string
+>>> say_my_name(1.55, "world")
+Traceback (most recent call last):
+    ...
 TypeError: first_name must be a string
