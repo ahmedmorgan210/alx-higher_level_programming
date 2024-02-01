@@ -11,3 +11,16 @@ import ``print_square`` from the ``4-print_square`` module:
 >>> print_square = __import__('4-print_square').print_square
 
 Now use it:
+size is an integer > 0
+>>> print_square(4)
+####
+####
+####
+####
+
+size is an integer < 0
+>>> print_square(-4)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+

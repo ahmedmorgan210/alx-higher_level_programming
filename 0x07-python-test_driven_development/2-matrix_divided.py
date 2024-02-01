@@ -3,7 +3,7 @@
 
 
 def matrix_divided(matrix, div):
-    """ Doc """
+    """this is amtrix div"""
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     if div == 0:
