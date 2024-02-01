@@ -34,3 +34,9 @@ missing 2 arguments
 Traceback (most recent call last):
     ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
+
+float overflow (passing float that exceeds the maximum representable finite positive floating-point numbe)
+>>> add_integer(float('inf'), 1)
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
