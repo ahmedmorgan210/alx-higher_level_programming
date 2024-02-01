@@ -24,3 +24,8 @@ Traceback (most recent call last):
     ...
 ValueError: size must be >= 0
 
+size is float less than 0
+>>> print_square(-0.5)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
