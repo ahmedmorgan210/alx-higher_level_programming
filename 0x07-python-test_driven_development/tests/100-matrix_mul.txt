@@ -92,4 +92,3 @@ missing 2 argument
 >>> matrix_mul()
 Traceback (most recent call last):
     ...
-[[1]]
