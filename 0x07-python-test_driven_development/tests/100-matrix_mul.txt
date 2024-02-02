@@ -64,6 +64,12 @@ Traceback (most recent call last):
     ...
 TypeError: m_a should contain only integers or floats
 
+an element of b list is not int or float
+>>> matrix_mul([[1, 2], [3, 4]], [[1, '2'], [3, 4]])
+Traceback (most recent call last):
+    ...
+TypeError: m_b should contain only integers or floats
+
 lists in different sizes
 >>> matrix_mul([[1, 2], [4]], [[1, 2], [3, 4]])
 Traceback (most recent call last):
