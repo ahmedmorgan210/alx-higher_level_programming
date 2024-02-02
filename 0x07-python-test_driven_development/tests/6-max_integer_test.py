@@ -25,4 +25,5 @@ class TestMaxInteger(unittest.TestCase):
             max_integer_module.max_integer([1, 2, 'k', 4])
 
 
-    
+if __name__ == '__main__':
+    unittest.main()
