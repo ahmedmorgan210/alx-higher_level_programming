@@ -89,6 +89,7 @@ Traceback (most recent call last):
 ValueError: m_a and m_b can't be multiplied
 
 missing 2 argument
->>> matrix_mul([[1, 2], [3, 4]][[1,2]])
+>>> matrix_mul()
 Traceback (most recent call last):
     ...
+[[1]]
