@@ -46,6 +46,12 @@ Traceback (most recent call last):
     ...
 ValueError: m_a can't be empty
 
+b list is empty
+>>> matrix_mul([[1, 2], [3, 4]], [])
+Traceback (most recent call last):
+    ...
+ValueError: m_b can't be empty
+
 a list of list is empty
 >>> matrix_mul([[], [3, 4]], [[1, 2], [3, 4]])
 Traceback (most recent call last):
