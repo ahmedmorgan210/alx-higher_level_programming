@@ -82,8 +82,13 @@ Traceback (most recent call last):
     ...
 TypeError: each row of m_b must be of the same size
 
-missi 1 argument
+can't be multiplied
 >>> matrix_mul([[1, 2], [3, 4]])
 Traceback (most recent call last):
     ...
 ValueError: m_a and m_b can't be multiplied
+
+missing 2 argument
+>>> matrix_mul([[1, 2], [3, 4]][[1,2]])
+Traceback (most recent call last):
+    ...
