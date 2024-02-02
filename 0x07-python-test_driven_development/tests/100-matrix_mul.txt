@@ -81,3 +81,9 @@ lists b in different sizes
 Traceback (most recent call last):
     ...
 TypeError: each row of m_b must be of the same size
+
+mb is not correctly formatted
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3]])
+Traceback (most recent call last):
+    ...
+ValueError: ma and mb can’t be multiplied
