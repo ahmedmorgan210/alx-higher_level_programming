@@ -2,7 +2,7 @@
 """module doc"""
 
 
-def matrix_mul(m_a, m_b):
+def matrix_mul(m_a=[[1]], m_b=[[1]]):
     """module doc"""
     if len(m_a) == 0 or len(m_b) == 0:
         raise ValueError("ma and mb can't be empty")
