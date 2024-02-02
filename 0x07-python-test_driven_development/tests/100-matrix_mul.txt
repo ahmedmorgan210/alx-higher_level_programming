@@ -92,3 +92,4 @@ missing 2 argument
 >>> matrix_mul()
 Traceback (most recent call last):
     ...
+TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
