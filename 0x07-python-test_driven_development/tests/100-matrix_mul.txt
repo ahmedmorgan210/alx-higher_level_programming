@@ -70,10 +70,14 @@ Traceback (most recent call last):
     ...
 TypeError: m_b should contain only integers or floats
 
-lists in different sizes
+lists a in different sizes
 >>> matrix_mul([[1, 2], [4]], [[1, 2], [3, 4]])
 Traceback (most recent call last):
     ...
 TypeError: each row of m_a must be of the same size
 
-
+lists b in different sizes
+>>> matrix_mul([[1, 2], [3, 4]], [[1], [3, 4]])
+Traceback (most recent call last):
+    ...
+TypeError: each row of m_b must be of the same size
