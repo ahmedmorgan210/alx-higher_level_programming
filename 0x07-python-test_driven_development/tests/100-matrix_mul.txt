@@ -82,8 +82,8 @@ Traceback (most recent call last):
     ...
 TypeError: each row of m_b must be of the same size
 
-mb is not correctly formatted
->>> matrix_mul([[1e+308, 2e+308], [3e+308, 4e+308]], [[1e+308, 2e+308], [3e+308, 4e+308]])
+missi 1 argument
+>>> matrix_mul([[1, 2], [3, 4]])
 Traceback (most recent call last):
     ...
-ValueError: m_a and m_b can’t be multiplied
+ValueError: m_a and m_b can't be multiplied
