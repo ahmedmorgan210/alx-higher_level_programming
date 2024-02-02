@@ -21,3 +21,6 @@ TypeError: text must be a string
 missing argument
 >>> text_indentation()
 
+
+text is an empty string
+>>> text_indentation("")
