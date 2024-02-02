@@ -4,10 +4,6 @@
 
 def matrix_mul(m_a=[[1]], m_b=[[1]]):
     """module doc"""
-    if len(m_a) == 0 or len(m_b) == 0:
-        raise ValueError("ma and mb can't be empty")
-    if len(m_a[0]) != len(m_b):
-        raise ValueError("ma and mb can't be multiplied")
     if type(m_a) is not list:
         raise TypeError("m_a must be a list")
     if type(m_b) is not list:
