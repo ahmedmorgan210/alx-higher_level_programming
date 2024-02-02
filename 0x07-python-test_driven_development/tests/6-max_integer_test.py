@@ -20,7 +20,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer_module.max_integer([]), None)
     
     def test_char(self):
-        # self.assertRaises(NameError, max_integer_module.max_integer, [1, 2, 'k', 4])
+        # self.assertRaises(TypeError, max_integer_module.max_integer, [1, 2, 'k', 4])
         with self.assertRaises(TypeError):
             max_integer_module.max_integer([1, 2, 'k', 4])
 
