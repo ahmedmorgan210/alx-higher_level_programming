@@ -86,4 +86,4 @@ mb is not correctly formatted
 >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3.3, 4]])
 Traceback (most recent call last):
     ...
-ValueError: ma and mb can’t be multiplied
+ValueError: m_a and m_b can’t be multiplied
