@@ -15,3 +15,39 @@ Now use it:
 normal / base case
 >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
 [[7, 10], [15, 22]]
+
+an argument is not a list
+>>> matrix_mul("hello", [[1, 2], [3, 4]])
+Traceback (most recent call last):
+    ...
+TypeError: m_a must be a list
+
+an argument is not a list of list
+>>> matrix_mul([1, 2, 3, 4], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+    ...
+TypeError: m_a must be a list of lists
+
+a list is empty
+>>> matrix_mul([], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+    ...
+ValueError: m_a can't be empty
+
+a list of list is empty
+>>> matrix_mul([[], [3, 4]], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+    ...
+ValueError: m_a can't be empty
+
+an element of a list is not int or float
+>>> matrix_mul([[1, 2], ['3', 4]], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+    ...
+TypeError: m_a should contain only integers or floats
+
+lists in different sizes
+>>> matrix_mul([[1, 2], [4]], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+    ...
+TypeError: each row of m_a must be of the same size
