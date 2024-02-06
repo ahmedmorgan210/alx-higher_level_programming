@@ -1,0 +1,14 @@
+The ``7-base_geometry`` module
+======================
+
+Using ``BaseGeometry``
+-------------------
+
+This is an example text file in reStructuredText format.
+First import
+``BaseGeometry`` from the ``example`` module:
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now use it:
+
