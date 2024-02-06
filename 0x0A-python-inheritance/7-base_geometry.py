@@ -4,9 +4,9 @@
 
 class BaseGeometry:
     """new base geometry class"""
-    def __init__(self, name, value):
-        self.name = name
-        self.value = value
+    # def __init__(self, name, value):
+    #     self.name = name
+    #     self.value = value
 
     def area(self):
         """rais exception"""
