@@ -14,6 +14,10 @@ Now use it:
 
 >>> base_geometry = BaseGeometry()
 
+normal / base case
+>>> base_geometry.integer_validator("name", 4)
+
+
 passing string instead of int
 >>> base_geometry.integer_validator("name", "John")
 Traceback (most recent call last):
@@ -31,3 +35,9 @@ base_geometry.integer_validator("distance", -4)
 Traceback (most recent call last):
 	...
 ValueError: distance must be greater than 0
+
+empty area
+>>> base_geometry.area()
+Traceback (most recent call last):
+	...
+Exception: area() is not implemented
