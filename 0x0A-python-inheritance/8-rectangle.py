@@ -9,7 +9,7 @@ class Rectangle(BaseGeometry):
         """init func"""
         # self.height = self.integer_validator("height", height)
         # self._width = width
-        if self.integer_validator("height", height)and self.integer_validator("width", width):  
+        if self.integer_validator("height", height)or self.integer_validator("width", width):  
         # if self.integer_validator("width", width) and\
         #         self.integer_validator("height", height):
             self._width = width
