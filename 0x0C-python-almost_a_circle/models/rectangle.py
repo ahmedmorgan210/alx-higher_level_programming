@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """the rectangle module"""
 from models.base import Base
-# Base = __import__(models/base).Base
 
 
 class Rectangle(Base):
+    """the rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
+        """rectanglr attributes"""
         super().__init__(id)
         self.__width = width
         self.__height = height
