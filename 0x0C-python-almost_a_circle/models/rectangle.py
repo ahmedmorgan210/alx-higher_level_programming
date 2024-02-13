@@ -9,16 +9,20 @@ class Rectangle(Base):
         """rectanglr attributes"""
         super().__init__(id)
         self.__width = width
+        if type(self.width) is not int:
+            raise TypeError("width must be an integer")
+        if self.width <= 0:
+            raise ValueError("width must be > 0")     
         self.__height = height
         self.__x = x
         self.__y = y
 
     @property
     def width(self):
-        if type(self.width) is not int:
-            raise TypeError("width must be an integer")
-        if self.width <= 0:
-            raise ValueError("width must be > 0")        
+        # if type(self.width) is not int:
+        #     raise TypeError("width must be an integer")
+        # if self.width <= 0:
+        #     raise ValueError("width must be > 0")        
         return self.__width
 
     @width.setter
