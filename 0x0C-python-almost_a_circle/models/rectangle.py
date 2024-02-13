@@ -15,7 +15,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        if not isinstance(self.__width, int):
+        if type(self.__width) is not int:
             raise TypeError("width must be an integer")
         if self.__width <= 0:
             raise ValueError("width must be > 0")        
@@ -23,7 +23,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
