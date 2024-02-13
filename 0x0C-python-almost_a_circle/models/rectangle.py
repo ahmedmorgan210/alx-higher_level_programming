@@ -8,7 +8,7 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """rectanglr attributes"""
         super().__init__(id)
-        # self.__width = width
+        self.__width = width
         if type(self.width) is not int:
             raise TypeError("width must be an integer")
         if self.width <= 0:
