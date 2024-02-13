@@ -64,3 +64,7 @@ class Rectangle(Base):
     def area(self):
         """claculating the instance area"""
         return self.__width * self.__height
+
+    def display(self):
+        for symbole in range(self.__height):
+            print("#" * self.__width)
