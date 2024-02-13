@@ -12,7 +12,7 @@ class Rectangle(Base):
         if type(self.width) is not int:
             raise TypeError("width must be an integer")
         if self.width <= 0:
-            raise ValueError("width must be > 0")     
+            raise ValueError("width must be > 0")
         self.__height = height
         self.__x = x
         self.__y = y
@@ -50,7 +50,7 @@ class Rectangle(Base):
         if not isinstance(self.__x, int):
             raise TypeError("height must be an integer")
         if self.__x <= 0:
-            raise ValueError("height must be > 0")        
+            raise ValueError("height must be > 0")
         return self.__x
 
     @x.setter
