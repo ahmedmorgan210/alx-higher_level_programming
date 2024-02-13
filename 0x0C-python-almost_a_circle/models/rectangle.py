@@ -15,10 +15,10 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        if type(self.width) is not int:
-            raise TypeError("width must be an integer")
-        if self.width <= 0:
-            raise ValueError("width must be > 0")     
+        # if type(self.width) is not int:
+        #     raise TypeError("width must be an integer")
+        # if self.width <= 0:
+        #     raise ValueError("width must be > 0")     
         return self.__width
 
     @width.setter
