@@ -77,3 +77,67 @@ class Rectangle(Base):
         return f"[Rectangle] " + \
             f"({self.id}) {self.__x}/{self.__y} " + \
             f"- {self.__width}/{self.__height}"
+
+    def update(self, *args):
+        """specify the arguments"""
+        args_list = list(args)
+        new_args = []
+        if len(args) == 4:
+            new_args.append(self.id)
+            for item in args:
+                new_args.append(item)
+
+        elif len(args) == 1 
+        else:
+            new_args.append(args[4])
+            for i in range(4):
+                new_args.append[args[i]]
+
+        #new_tuple = tuple(new_args)
+        self.id = new_args[0]
+        self.__width = new_args[1]
+        self.__height = new_args[2]
+        self.__x = new_args[3]
+        self.__y = new_args[4]
+
+
+
+        
+        
+        # if len(args) == 0:
+        #     args[0] = self.id
+
+        # if len(args) > 0:
+        #     if len(args) >  1:
+        #         args_list[0] = id
+        #         args_list[1] = self.__width
+
+        #     if len(args) >  2:
+        #         args_list[0] = id
+        #         args_list[1] = self.__width
+        #         args_list[2] = self.__height
+
+        #     if len(args) >  3:
+        #         args_list[0] = id
+        #         args_list[1] = self.__width
+        #         args_list[2] = self.__height
+        #         args_list[3] = self.__x
+
+        # args_list[0] = self.id
+        # args_list[1] = self.__width
+        # args_list[2] = self.__height
+        # args_list[3] = self.__x
+        # args_list[4] = self.__y
+
+        # args_tuple = tuple(args_list)
+
+
+        # if len(args) >= 0:
+        #     if len(args) == 0:
+        #         args[0] = self.id
+        #     if len(args) >= 1:
+
+        #         args[0] = self.id
+        #         args[1] = self.__width
+        # else:
+        #     pass
