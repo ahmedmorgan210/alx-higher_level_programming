@@ -67,7 +67,10 @@ class Rectangle(Base):
 
     def display(self):
         """display symbole"""
+        for vertical in range(self.__y):
+            print()
         for symbole in range(self.__height):
+            print(" " * self.__x, end="")
             print("#" * self.__width)
 
     def __str__(self) -> str:
