@@ -7,7 +7,6 @@ class Square(Rectangle):
     """the square chape class"""
     def __init__(self, size, x=0, y=0, id=None):
         """initializing thw square"""
-        print(f"Size type: {type(size)}")
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
