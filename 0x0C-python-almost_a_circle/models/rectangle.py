@@ -81,45 +81,13 @@ class Rectangle(Base):
     def update(self, *args):
         """specify the arguments"""
         if len(args) > 0:
-            arg_num = 0
             if len(args) == 1:
                 self.id = args[0]
-            
-        
-        # if len(args) == 0:
-        #     args[0] = self.id
-
-        # if len(args) > 0:
-        #     if len(args) >  1:
-        #         args_list[0] = id
-        #         args_list[1] = self.__width
-
-        #     if len(args) >  2:
-        #         args_list[0] = id
-        #         args_list[1] = self.__width
-        #         args_list[2] = self.__height
-
-        #     if len(args) >  3:
-        #         args_list[0] = id
-        #         args_list[1] = self.__width
-        #         args_list[2] = self.__height
-        #         args_list[3] = self.__x
-
-        # args_list[0] = self.id
-        # args_list[1] = self.__width
-        # args_list[2] = self.__height
-        # args_list[3] = self.__x
-        # args_list[4] = self.__y
-
-        # args_tuple = tuple(args_list)
-
-
-        # if len(args) >= 0:
-        #     if len(args) == 0:
-        #         args[0] = self.id
-        #     if len(args) >= 1:
-
-        #         args[0] = self.id
-        #         args[1] = self.__width
-        # else:
-        #     pass
+            if len(args) == 2:
+                self.__width = args[1]
+            if len(args) == 3:
+                self.__height = args[2]
+            if len(args) == 4:
+                self.__x = args[3]
+            if len(args) == 5:
+                self.__y = args[4]
