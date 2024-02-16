@@ -8,15 +8,15 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """initializing thw square"""
         super().__init__(size, size, x, y, id)
-        self.size_width = size[0]
-        self.size_height = size[1]
+        self.size = size
+        #self.size_height = size
         # self.height = size
 
     @property
-    def size_width(self):
+    def size(self):
         return self.__size
     
-    @size_width.setter
+    @size.setter
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
