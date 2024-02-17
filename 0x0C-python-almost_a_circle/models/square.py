@@ -43,7 +43,7 @@ class Square(Rectangle):
 
         if args:
             return
-        
+
         for key, value in kwargs.items():
             if hasattr(self, key):
                 setattr(self, key, value)
