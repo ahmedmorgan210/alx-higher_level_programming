@@ -9,13 +9,11 @@ class Square(Rectangle):
         """initializing thw square"""
         super().__init__(size, size, x, y, id)
         self.size = size
-        #self.size_height = size
-        # self.height = size
 
     @property
     def size(self):
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
