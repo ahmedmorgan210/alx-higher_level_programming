@@ -26,3 +26,24 @@ class Square(Rectangle):
     def __str__(self):
         """overriding the __str__ method of the reqtangle parent class"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+
+    def update(self, *args, **kwargs):
+        """specify the arguments"""
+        if len(args) > 0:
+            if len(args) == 1:
+                self.id = args[0]
+            if len(args) == 2:
+                self.size = args[1]
+            # if len(args) == 3:
+            #     self.__height = args[2]
+            if len(args) == 3:
+                self.x = args[2]
+            if len(args) == 4:
+                self.y = args[3]
+
+        if args:
+            return
+        
+        for key, value in kwargs.items():
+            if hasattr(self, key):
+                setattr(self, key, value)
