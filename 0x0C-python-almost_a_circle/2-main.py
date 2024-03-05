@@ -39,7 +39,7 @@ except Exception as e:
     exit(1)
 
 try:
-    Rectangle({ 'id': 12 }, 13)
+    Rectangle({'id': 12}, 13)
     print("TypeError exception not raised")
     exit(1)
 except TypeError as e:
