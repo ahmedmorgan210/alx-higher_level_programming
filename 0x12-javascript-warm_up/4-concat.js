@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-// const firstArg = process.argv[3];
-const secondArg = process.argv[4];
-const fullArgs = `${process.argv[3]} 'is' ${secondArg}`;
+const firstArg = process.argv[2];
+const secondArg = process.argv[3];
+const fullArgs = `${firstArg} 'is' ${secondArg}`;
 
 console.log(fullArgs);
