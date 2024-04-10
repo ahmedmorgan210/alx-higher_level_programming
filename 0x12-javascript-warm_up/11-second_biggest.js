@@ -5,11 +5,10 @@ function largest (array) {
   const argNum = argList.map(Number);
 
   if (argList.length < 2) {
-    //console.log(0);
     return (0);
-  } 
+  }
+
   if (!argNum) {
-    //console.log(0);
     return (0);
   } else if (argNum) {
     argNum.sort((a, b) => b - a);
