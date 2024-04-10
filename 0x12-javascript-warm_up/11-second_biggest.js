@@ -5,6 +5,7 @@ const argNum = argList.map(Number);
 
 if (argList.length < 2) {
   console.log(0);
+  return;
 }
 
 if (!argNum) {
