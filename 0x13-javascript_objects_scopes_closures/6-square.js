@@ -2,23 +2,22 @@
 
 const Ex = require('./5-square');
 
-class Square extends Ex{
-
+class Square extends Ex {
   // constructor (size) {
   //   super(size);
   // }
 
-  charPrint(c) {
+  charPrint (c) {
     if (!c) {
-        this.print();
+      this.print();
     } else {
-        for (let x = 0; x < this.height; x++) {
-            let row = '';
-            for (let y = 0; y < this.width; y++) {
-              row += c;
-            }
-            console.log(row);
+      for (let x = 0; x < this.height; x++) {
+        let row = '';
+        for (let y = 0; y < this.width; y++) {
+          row += c;
         }
+        console.log(row);
+      }
     }
   }
 }
