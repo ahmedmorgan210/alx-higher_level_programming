@@ -1,6 +1,7 @@
 #!/usr/bin/node
 
 class Rectangle {
+  //temp = 0;
   constructor (w, h) {
     if (!w || !h) {
       // empty instance incase if no h or w passed
@@ -9,7 +10,7 @@ class Rectangle {
     } else {
       this.width = w;
       this.height = h;
-      // this.temp;
+      // const temp = 0;
     }
   }
 
