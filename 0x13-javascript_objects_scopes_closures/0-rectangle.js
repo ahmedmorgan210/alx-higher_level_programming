@@ -2,3 +2,4 @@
 
 class Rectangle {
 }
+Rectangle();
