@@ -11,6 +11,16 @@ class Rectangle {
       this.height = h;
     }
   }
+
+  print () {
+    for (let x = 0; x < this.height; x++) {
+      let row = '';
+      for (let y = 0; y < this.width; y++) {
+        row += 'X';
+      }
+      console.log(row);
+    }
+  }
 }
 
 // In Node.js, to make a class or any other module available to other files, you need to export it using module.exports.
