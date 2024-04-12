@@ -13,15 +13,24 @@ Write a script that lists all states from the database hbtn_0e_0_usa:
     Your code should not be executed when imported
 
 """
+
+import sys
 import MySQLdb
-"""create a connection and retreive the states"""
+"""import the mysql DB-API"""
 
-db_conn = MySQLdb.connect(user='root', password='', database='hbtn_0e_0_usa')
-cur = db_conn.cursor()
-cur.execute("SELECT * FROM states ORDER BY id ASC;")
-data = cur.fetchall()
+def main (user, password, database):
+	"""create a connection and retreive the states"""
+	db_conn = MySQLdb.connect(user='root', password='', database='hbtn_0e_0_usa')
+	cur = db_conn.cursor()
+	cur.execute("SELECT * FROM states ORDER BY id ASC;")
+	data = cur.fetchall()
 
-print(data[0], data[1])
+	for row in data:
+		print(row)
 
-cur.close()
-db_conn.close()
+	cur.close()
+	db_conn.close()
+
+if __name__ == "__main__":
+	user, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
+	main (user, password, database)
