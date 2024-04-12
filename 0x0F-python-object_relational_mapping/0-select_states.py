@@ -28,8 +28,8 @@ def main ():
 	for row in data:
 		print(row)
 
-	cur.close()
-	db_conn.close()
+	# cur.close()
+	# db_conn.close()
 
 if __name__ == "__main__":
 	# user, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
