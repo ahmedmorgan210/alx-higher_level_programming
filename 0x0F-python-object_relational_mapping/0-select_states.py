@@ -14,6 +14,7 @@ Write a script that lists all states from the database hbtn_0e_0_usa:
 
 """
 import MySQLdb
+"""create a connection and retreive the states"""
 
 db_conn = MySQLdb.connect(user='root', password='', database='hbtn_0e_0_usa')
 cur = db_conn.cursor()
