@@ -18,7 +18,7 @@ import sys
 import MySQLdb
 """import the mysql DB-API"""
 
-def main (user, password, database):
+def main ():
 	"""create a connection and retreive the states"""
 	db_conn = MySQLdb.connect(user='root', password='', database='hbtn_0e_0_usa')
 	cur = db_conn.cursor()
@@ -32,5 +32,5 @@ def main (user, password, database):
 	db_conn.close()
 
 if __name__ == "__main__":
-	user, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
-	main (user, password, database)
+	# user, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
+	main ()
