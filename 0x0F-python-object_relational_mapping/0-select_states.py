@@ -20,7 +20,7 @@ import MySQLdb
 
 def main ():
 	"""create a connection and retreive the states"""
-	db_conn = MySQLdb.connect(user='root', passwd='root')
+	db_conn = MySQLdb.connect(user='root', passwd='root', db='hbtn_0e_0_usa')
 	cur = db_conn.cursor()
 	cur.execute("SELECT * FROM states ORDER BY id ASC;")
 	data = cur.fetchall()
