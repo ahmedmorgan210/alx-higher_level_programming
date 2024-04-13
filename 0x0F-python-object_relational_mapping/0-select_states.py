@@ -14,24 +14,29 @@ Write a script that lists all states from the database hbtn_0e_0_usa:
 
 """
 
-import sys
+# import sys
 import MySQLdb
 """import the mysql DB-API"""
 
-def main ():
-	"""create a connection and retreive the states"""
-	db_conn = MySQLdb.connect(host="localhost", port=3306, user="root", passwd="root", db="hbtn_0e_0_usa", charset="utf8")
-	cur = db_conn.cursor()
-	cur.execute("SELECT * FROM states ORDER BY id ASC;")
-	# cur.execute("SELECT * FROM states ORDER BY id ASC;")
-	data = cur.fetchall()
 
-	for row in data:
-		print(data)
+def main():
+    """create a connection and retreive the states"""
+    db_conn = MySQLdb.connect(host="localhost", port=3306,
+                              user="root",
+                              passwd="root", db="hbtn_0e_0_usa",
+                              harset="utf8")
+    cur = db_conn.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC;")
+    # cur.execute("SELECT * FROM states ORDER BY id ASC;")
+    data = cur.fetchall()
 
-	# cur.close()
-	# db_conn.close()
+    for row in data:
+        print(data)
+
+    cur.close()
+    db_conn.close()
+
 
 if __name__ == "__main__":
-	# user, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
-	main ()
+    # user, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
+    main()
