@@ -31,11 +31,14 @@ def main(*args, **kwargs):
                               charset="utf8")
     cur = db_conn.cursor()
 
+    #   The %s is a placeholder for a parameter, and the actual value\
+    #       is passed as a tuple (sys.argv[4],). This method ensures that\
+    #       the user input is properly escaped and treated as a literal value,\
+    #       not as part of the SQL command.
     query = "SELECT * FROM states WHERE name COLLATE utf8mb4_bin\
         LIKE %s ORDER BY id ASC"
     cur.execute(query, (sys.argv[4],))
-    # cur.execute("SELECT * FROM states WHERE name LIKE 'N%' AND \
-    #             name LIKE 'n%' ORDER BY id ASC")
+
     data = cur.fetchall()
 
     for row in data:
@@ -46,5 +49,26 @@ def main(*args, **kwargs):
 
 
 if __name__ == "__main__":
-    # user, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
     main()
+# Additional Tips:
+# 1) Always Use Parameterized Queries:
+#        Whenever you need to include
+#        user input in your SQL queries, use parameterized queries.
+#        This applies to all types of SQL queries,
+#        including SELECT, INSERT, UPDATE, and DELETE.
+# 2) Limit Database Permissions:
+#        Ensure that the database user used by your application
+#        has the minimum necessary permissions.
+#        This can limit the potential damage of an SQL injection attack.
+# 3) Validate and Sanitize Input:
+#        While parameterized queries are effective at preventing SQL injection,
+#        it's still a good practice to validate and sanitize user input
+#        before using it in your application.
+#        This can help catch invalid or malicious input early.
+# Use ORM Libraries:
+#        If possible, consider using an Object-Relational Mapping (ORM)
+#        library like SQLAlchemy or Django ORM.
+#        These libraries provide a higher-level,
+#        more secure interface for interacting with databases,
+#        and they automatically handle many of the security concerns,
+#        including SQL injection.
