@@ -59,7 +59,7 @@ def main(user, password, database, state_name):
 
 
 if __name__ == "__main__":
-    user, password, database, state_name = sys.argv[1],\
+    user, password, database, state_name = sys.argv[1], \
         sys.argv[2], sys.argv[3], sys.argv[4]
     main(user, password, database, state_name)
 
