@@ -14,7 +14,7 @@ Write a script that lists all states from the database hbtn_0e_0_usa:
 
 """
 
-# import sys
+import sys
 import MySQLdb
 """import the mysql DB-API"""
 
@@ -23,9 +23,9 @@ def main(*args, **kwargs):
     """create a connection and retreive the states"""
     db_conn = MySQLdb.connect(host="localhost",
                               port=3306,
-                              user="root",
-                              passwd="root",
-                              db="hbtn_0e_0_usa",
+                              user=sys.argv[1],
+                              passwd=sys.argv[2],
+                              db=sys.argv[3],
                               charset="utf8")
     cur = db_conn.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC;")
