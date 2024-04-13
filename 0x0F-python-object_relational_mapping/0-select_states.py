@@ -28,12 +28,12 @@ def main(*args, **kwargs):
                               db=sys.argv[3],
                               charset="utf8")
     cur = db_conn.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id ASC;")
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
     # cur.execute("SELECT * FROM states ORDER BY id ASC;")
     data = cur.fetchall()
 
     for row in data:
-        print(data)
+        print(row)
 
     cur.close()
     db_conn.close()
