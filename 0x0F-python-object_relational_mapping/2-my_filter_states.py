@@ -30,7 +30,7 @@ def main(*args, **kwargs):
                               db=sys.argv[3],
                               charset="utf8")
     cur = db_conn.cursor()
-    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+    query = "SELECT * FROM states WHERE name COLLATE utf8mb4_bin LIKE %s ORDER BY id ASC"
     cur.execute(query, (sys.argv[4],))
     # cur.execute("SELECT * FROM states WHERE name LIKE 'N%' AND \
     #             name LIKE 'n%' ORDER BY id ASC")
