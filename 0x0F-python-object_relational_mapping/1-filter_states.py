@@ -28,7 +28,8 @@ def main(*args, **kwargs):
                               db=sys.argv[3],
                               charset="utf8")
     cur = db_conn.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' OR name LIKE 'n%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' OR \
+                name LIKE 'n%' ORDER BY id ASC")
     data = cur.fetchall()
 
     for row in data:
