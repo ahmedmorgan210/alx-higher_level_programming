@@ -42,21 +42,27 @@ def main(user, password, database, state_name):
     #             WHERE states.name = %s"
     #             #ORDER BY cities.id ASC;"
     # cur.execute(query, (sys.argv[4],))
-    
-    cur.execute("SELECT cities.name FROM cities JOIN states ON cities.state_id = states.id WHERE states.name = %s ORDER BY cities.id ASC;", [state_name])
+
+    cur.execute("SELECT cities.name FROM cities\
+                JOIN states ON cities.state_id = states.id\
+                WHERE states.name = %s\
+                ORDER BY cities.id ASC;", (state_name,))
     data = cur.fetchall()
 
-    for row in data:
-        print(row)
+    city_names = ', '.join([row[0] for row in data])
+    print(city_names)
+    # for row in data:
+    #     print(row)
 
     cur.close()
     db_conn.close()
 
 
 if __name__ == "__main__":
-    user, password, database, state_name = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+    user, password, database, state_name = sys.argv[1],\
+        sys.argv[2], sys.argv[3], sys.argv[4]
     main(user, password, database, state_name)
-    #main()
+
 
 # Additional Tips:
 # 1) Always Use Parameterized Queries:
