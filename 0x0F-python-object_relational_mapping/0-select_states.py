@@ -19,7 +19,7 @@ import MySQLdb
 """import the mysql DB-API"""
 
 
-def main():
+def main(*args, **kwargs):
     """create a connection and retreive the states"""
     db_conn = MySQLdb.connect(host="localhost",
                               port=3306,
