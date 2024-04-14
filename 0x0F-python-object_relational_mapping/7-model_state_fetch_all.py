@@ -46,7 +46,7 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    result = session.query(State).order_by(State.id).all()
+    result = session.query(State).all()
 
     for i, state in enumerate(result, start=1):
         print(f"{i}: {state.name}")
