@@ -42,6 +42,12 @@ def main():
         for i, state in enumerate(result, start=1):
             print(f"{state.id}: {state.name}")
 
+        # The below loop also correct and display the same
+        #       result as  the above one
+
+        # for x in result:
+        #     print(f"{x.id}: {x.name}")
+
 
 if __name__ == "__main__":
     main()
