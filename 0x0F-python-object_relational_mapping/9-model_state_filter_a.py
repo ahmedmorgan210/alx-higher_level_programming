@@ -40,7 +40,7 @@ def main():
         print("Nothing")
     else:
         for i, state in enumerate(result, start=1):
-            print(f"{i}: {state.name}")
+            print(f"{state.id}: {state.name}")
 
 
 if __name__ == "__main__":
