@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 This module demonstrates how to use SQLAlchemy to fetch and display all states from a MySQL database.
 
