@@ -35,8 +35,8 @@ def main():
     session = Session()
 
     result = session.query(States).first()
-    
-    if result == None:
+
+    if result is None:
         print("Nothing")
     else:
         print(f"{1}: {result.name}")
