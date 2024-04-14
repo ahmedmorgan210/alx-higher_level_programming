@@ -2,6 +2,13 @@
 """
 This module demonstrates how to use SQLAlchemy to fetch and display all states from a MySQL database.
 
+Usage:
+    python3 7-model_state_fetch_all.py <username> <password> <database_name>
+
+This script connects to a MySQL database using the provided username, password, and database name. It then queries the 'states' table, sorts the results by the state name in ascending order, and prints each state name along with its corresponding number in the sorted list.
+
+The script uses SQLAlchemy, a popular SQL toolkit and Object-Relational Mapping (ORM) system for Python, to abstract the database operations. It defines a `State` class that maps to the 'states' table in the database, and uses a session to query the database.
+
 """
 
 import sys
@@ -26,6 +33,9 @@ class State(Base):
 def main():
     """
     Main function to fetch and display all states from the database.
+
+    This function creates a SQLAlchemy engine and session, queries the\
+        'states' table, sorts the results by the state name, and prints each state name along with its corresponding number in the sorted list.
     """
     if len(sys.argv) < 4:
         print("Usage: python3 7-model_state_fetch_all.py <username> <password> <database_name>")
