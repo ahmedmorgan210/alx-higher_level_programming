@@ -34,7 +34,6 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    #result = session.query(States).filter(States.name == sys.argv[4]).all()
     new_state = States(name="Louisiana")
     session.add(new_state)
     session.commit()
