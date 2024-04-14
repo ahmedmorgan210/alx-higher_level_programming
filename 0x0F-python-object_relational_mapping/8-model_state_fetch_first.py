@@ -35,8 +35,11 @@ def main():
     session = Session()
 
     result = session.query(States).first()
-
-    print(f"{1}: {result.name}")
+    
+    if result == None:
+        print("Nothing")
+    else:
+        print(f"{1}: {result.name}")
 
 
 if __name__ == "__main__":
