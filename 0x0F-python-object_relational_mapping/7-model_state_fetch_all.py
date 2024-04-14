@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 Write a script that lists all State objects from the database hbtn_0e_6_usa
 
@@ -10,6 +11,7 @@ Results must be sorted in ascending order by states.id
 The results must be displayed as they are in the example below
 Your code should not be executed when imported
 """
+
 
 import sys
 from sqlalchemy import create_engine, Column, Integer, String
@@ -26,7 +28,8 @@ engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
 Session = sessionmaker(bind=engine)
 session = Session()
 
-
+""" try to document 
+"""
 class State(Base):
     """defining the states table"""
     __tablename__ = 'states'
@@ -48,7 +51,4 @@ for sort, state in enumerate(result, start=1):
     print(f"{sort}: {state.name}")
 
 if __name__ == "__main__":
-    # engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-    #                        .format(sys.argv[1], sys.argv[2], sys.argv[3]),
-    #                        pool_pre_ping=True)
     Base.metadata.create_all(engine)
