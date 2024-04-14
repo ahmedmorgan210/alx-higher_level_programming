@@ -36,7 +36,7 @@ def main():
 
     result = session.query(States).filter(States.name == sys.argv[4]).all()
 
-    if result is None:
+    if not result:
         print("Not found")
     else:
         # for i, state in enumerate(result, start=1):
