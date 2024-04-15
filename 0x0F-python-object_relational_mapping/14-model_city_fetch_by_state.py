@@ -27,6 +27,7 @@ def main():
     cities = session.query(City).join(State, City.state_id == State.id
                                       ).order_by(City.id).all()
 
+
     for city in cities:
         print(f"{city.State.name}: ({city.id}) {city.name}")
 
