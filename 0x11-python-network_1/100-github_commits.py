@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-"""Python script to fetch and print the 10 most recent commits from a GitHub repository"""
+"""Python script to fetch and print the 10 most\
+      recent commits from a GitHub repository"""
+
 
 import requests
 import sys
+"""The base URL for the GitHub API"""
 
-# The base URL for the GitHub API
+
 base_url = "https://api.github.com/repos"
 
 # The repository and owner names are passed as command-line arguments
