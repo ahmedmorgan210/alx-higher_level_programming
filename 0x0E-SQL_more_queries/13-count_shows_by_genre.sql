@@ -9,10 +9,13 @@
 --     Results must be sorted in descending order by the number of shows linked
 --     You can use only one SELECT statement
 --     The database name will be passed as an argument of the mysql command
-SELECT tv_genres.name AS "genre", COUNT(tv_genres.id) AS "number_of_shows"
-FROM tv_genres
+SELECT tv_genres.name AS "genre", COUNT(tv_shows.title) AS "number_of_shows"
+FROM tv_shows
 LEFT JOIN tv_show_genres 
-ON tv_show_genres.show_id = tv_show_genres.genre_id
+ON tv_shows.id = tv_show_genres.show_id
+LEFT JOIN tv_genres 
+ON tv_show_genres.genre_id = tv_genres.id
 GROUP BY tv_genres.name
+HAVING COUNT(tv_shows.title) > 0
 -- WHERE tv_show_genres.show_id IS NULL
 ORDER BY number_of_shows DESC;
