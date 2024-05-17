@@ -9,4 +9,3 @@ if __name__ == "__main__":
         html = response.getheader('X-Request-Id')
 
     print(html)
-
