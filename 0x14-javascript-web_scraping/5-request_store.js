@@ -22,4 +22,8 @@ async function writingFile (urlToText, filePath) {
   }
 }
 
-writingFile(process.argv[2], process.argv[3]);
+if (process.argv[3]){
+  writingFile(process.argv[2], process.argv[3]);
+} else {
+  console.log('');
+}
