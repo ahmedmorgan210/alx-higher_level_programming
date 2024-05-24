@@ -9,10 +9,10 @@ async function writingFile (urlToText, filePath) {
   //   json: true
   // };
   try {
-    request(urlToText, function (err, response, body) {
+    request(urlToText, { json: true }, function (err, response, body) {
       if (!err && response.statusCode === 200) {
-        const responseJson = JSON.parse(body);
-        fs.writeFile(filePath, responseJson);
+        // const responseJson = JSON.parse(body);
+        fs.writeFile(filePath, body);
       } else {
         console.error(err);
       }
