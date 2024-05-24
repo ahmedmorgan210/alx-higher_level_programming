@@ -11,17 +11,14 @@ async function writingFile(urlToText, filePath){
   try {
     request(options, function(err, response, body){
       if (!err && response.statusCode == 200) {
-          // text = body;
           fs.writeFile(filePath, body);
       } else {
         console.error(err);
       }
     })
-    // await fs.writeFile(filePath, response.body);
   } catch (error) {
     console.error(error);
   }
-
 };
 
 
