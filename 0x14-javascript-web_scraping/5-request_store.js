@@ -12,7 +12,12 @@ async function writingFile (urlToText, filePath) {
     request(urlToText, { json: true }, function (err, response, body) {
       if (!err && response.statusCode === 200) {
         // const responseJson = JSON.parse(body);
-        fs.writeFile(filePath, body);
+        if (Object.keys(body).length === 0){
+          console.log('');
+        } else {
+          fs.writeFile(filePath, body);
+        }
+
       } else {
         console.error(err);
       }
