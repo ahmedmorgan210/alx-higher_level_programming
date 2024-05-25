@@ -1,34 +1,48 @@
 #!/usr/bin/node
 
-const fs = require('fs').promises; // Use fs.promises for asynchronous file operations
+const fs = require('fs').promises;
 const request = require('request');
 
-function writeFileFromUrl (url, filePath) {
-  return new Promise((resolve, reject) => {
-    request({ url, json: true }, (error, response, body) => {
-      if (error || response.statusCode !== 200) {
-        reject(new Error(`Failed to fetch data: ${error ? error.message : 'Unknown error'}`));
+async function writingFile (urlToText, filePath) {
+  // options = {
+  //   url: urlToText,
+  //   json: true
+  // };
+  try {
+    request(urlToText, { json: true }, function (err, response, body) {
+      if (!err && response.statusCode === 200) {
+        // const responseJson = JSON.parse(body);
+
+        if (!fs.writeFile(filePath, body)) {
+          console.log('error happen when writing to file - writing failed');
+        }
+
+        // if (Object.keys(body).length !== 0){
+        //   fs.writeFile(filePath, body);
+        // }
+      } else if (fs.writeFile(filePath, body)) {
+        console.log('success');
       } else {
-        resolve(body);
+        console.error(err);
       }
+
+      // if (Object.keys(body).length === 0){
+      //   console.log('');
+      // } else {
+      //   fs.writeFile(filePath, body);
+      // }
+
+      // } else {
+      //   console.error(err);
+      // }
     });
-  }).then(async (body) => {
-    try {
-      await fs.writeFile(filePath, JSON.stringify(body));
-      console.log('Success: File written.');
-    } catch (writeError) {
-      console.error('Error writing to file:', writeError.message);
-    }
-  }).catch((fetchError) => {
-    console.error('Fetch error:', fetchError.message);
-  });
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-// Check if arguments are provided
-if (process.argv.length > 3) {
-  const url = process.argv[2];
-  const filePath = process.argv[3];
-  writeFileFromUrl(url, filePath);
+if (process.argv[3]) {
+  writingFile(process.argv[2], process.argv[3]);
 } else {
-  console.log('Usage: node script.js <URL> <file_path>');
+  console.log('');
 }
