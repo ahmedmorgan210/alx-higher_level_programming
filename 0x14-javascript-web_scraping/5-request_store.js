@@ -3,29 +3,48 @@
 const fs = require('fs').promises;
 const request = require('request');
 
-let data; // Declare the variable outside the function
-
-async function fetchDataAndWriteToFile(url, filePath) {
+async function writingFile (urlToText, filePath) {
+  // options = {
+  //   url: urlToText,
+  //   json: true
+  // };
   try {
-    const response = await new Promise((resolve, reject) => {
-      request(url, { json: true }, (error, response, body) => {
-        if (!error && response.statusCode === 200) {
-          resolve(body); // Resolve the promise with the body
-        } else {
-          reject(new Error(`Request failed with status ${response? response.statusCode : 'unknown'} ${body}`));
-        }
-      });
+
+    request(urlToText, { json: true }, function (err, response, body) {
+      if (!err && response.statusCode === 200) {
+        // const responseJson = JSON.parse(body);
+
+        if (!fs.writeFile(filePath, body)){
+          console.log('error happen when writing to file - writing failed')
+        };
+
+        // if (Object.keys(body).length !== 0){
+        //   fs.writeFile(filePath, body);
+        // }
+
+      } else if (fs.writeFile(filePath, body)){
+        console.log('success')
+      }else {
+        console.error(err);
+      }
+        
+        // if (Object.keys(body).length === 0){
+        //   console.log('');
+        // } else {
+        //   fs.writeFile(filePath, body);
+        // }
+
+      // } else {
+      //   console.error(err);
+      // }
     });
-
-    data = response; // Update the global variable with the fetched data
-
-    await fs.writeFile(filePath, JSON.stringify(response));
-    console.log('Data written successfully');
   } catch (error) {
     console.error(error);
   }
 }
 
-fetchDataAndWriteToFile(process.argv[2], process.argv[3]);
-
-console.log(data); // Access the updated data variable
+if (process.argv[3]){
+  writingFile(process.argv[2], process.argv[3]);
+} else {
+  console.log('');
+}
