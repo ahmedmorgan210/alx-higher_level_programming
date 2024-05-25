@@ -3,15 +3,15 @@
 const fs = require('fs').promises;
 const request = require('request');
 
-async function writingFile(urlToText, filePath) {
+async function writingFile (urlToText, filePath) {
   try {
     request(urlToText, { json: true }, function (err, response, body) {
-      if (err ||!response || response.statusCode!== 200) {
+      if (err || !response || response.statusCode !== 200) {
         console.error('Error fetching data:', err || 'Request failed');
         return;
       }
 
-      if (body && Object.keys(body).length!== 0) {
+      if (body && Object.keys(body).length !== 0) {
         fs.writeFile(filePath, JSON.stringify(body)).then(() => {
           console.log('Data written successfully.');
         }).catch((writeErr) => {
