@@ -9,14 +9,22 @@ async function writingFile (urlToText, filePath) {
   //   json: true
   // };
   try {
+
     request(urlToText, { json: true }, function (err, response, body) {
       if (!err && response.statusCode === 200) {
         // const responseJson = JSON.parse(body);
-        if (Object.keys(body).length === 0){
-          console.log('');
-        } else {
+
+        // fs.writeFile(filePath, body);
+
+        if (Object.keys(body).length != 0){
           fs.writeFile(filePath, body);
         }
+        
+        // if (Object.keys(body).length === 0){
+        //   console.log('');
+        // } else {
+        //   fs.writeFile(filePath, body);
+        // }
 
       } else {
         console.error(err);
