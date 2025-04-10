@@ -7,6 +7,6 @@ if (argv.length < 4) {
 } else {
   const items = argv.slice(2);
   items.sort();
-  items.reverse();
+//   items.reverse();
   console.log(items[1]);
 }

@@ -8,8 +8,8 @@ if (argv.length < 4) {
   const items = argv.slice(2);
   console.log(`${items}`);
   items.sort();
-  console.log(`${items}`);
-  items.reverse();
-  console.log(`${items}`);
+  // console.log(`${items}`);
+  // items.reverse();
+  // console.log(`${items}`);
   console.log(items[1]);
 }
