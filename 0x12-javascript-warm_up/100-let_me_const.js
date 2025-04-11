@@ -1,5 +1,7 @@
 #!/usr/bin/node
 
-const myVar = 333
+const variable = require('./100-main')
+
+myVar = 333
 
 module.exports = {myVar}
