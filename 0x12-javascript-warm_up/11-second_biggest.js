@@ -28,5 +28,7 @@ if (argv.length < 4) {
   items.sort((a, b) => a - b);
   // console.log(items);
   // console.log(items[-2]);
-  console.log(items.length - 2);
+  items.reverse();
+  console.log(items[1]);
+  // console.log(items.length - 2);
 }
