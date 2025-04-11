@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const Rectangle = require('./4-rectangle');
+const Rectangle = require('./4-rectangle - try');
 
 const r1 = new Rectangle(2, 3);
 console.log('Normal:');
