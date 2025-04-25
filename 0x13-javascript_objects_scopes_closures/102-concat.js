@@ -6,8 +6,8 @@ const fs = require('fs');
 const [,, file1, file2, dest] = process.argv;
 
 // Read the contents of both files
-const content1 = fs.readFileSync(file1, 'utf8');
-const content2 = fs.readFileSync(file2, 'utf8');
+const content1 = fs.readFileSync(file1);
+const content2 = fs.readFileSync(file2);
 
 // Initialize combined content
 let combinedContent = '';
